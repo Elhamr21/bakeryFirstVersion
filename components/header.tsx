@@ -56,7 +56,7 @@ export function Header() {
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
           scrolled 
-            ? "bg-[#faf6f0]/95 backdrop-blur-md shadow-[0_4px_30px_rgba(139,90,43,0.08)] py-2" 
+            ? "bg-[#f3ede3]/95 backdrop-blur-md shadow-[0_4px_30px_rgba(139,90,43,0.12)] py-2"
             : "bg-transparent py-4"
         }`}
       >
@@ -70,27 +70,30 @@ export function Header() {
               className="flex items-center gap-3 shrink-0 group"
               aria-label="Balkan Bäckerei - Zur Startseite"
             >
-              <div className={`relative rounded-full overflow-hidden transition-all duration-500 ${
+              
+              <div className={`relative overflow-hidden p-4 transition-all duration-500 transform ${
                 scrolled 
-                  ? "w-12 h-12 sm:w-14 sm:h-14 border-2 border-[#c9a87c]/30" 
-                  : "w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18 border-2 border-white/30"
-              } shadow-lg group-hover:shadow-xl group-hover:border-[#c9a87c]/50`}>
+                  ? "w-16 h-16 sm:w-20 sm:h-20 mt-4" 
+                  : "w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mt-4"
+              }   group-hover:border-[#c9a87c]/50 group-hover:scale-105`}>
                 <Image
-                  src="/images/mainlogo.png"
-                  alt="Balkan Bäckerei Logo"
-                  fill
-                  className="object-cover scale-150"
-                  priority
-                />
+              src="/images/main-logo.png"
+              alt="Balkan Bäckerei Logo"
+              fill
+              className="object-cover scale-110 drop-shadow-[0_0_2px_white] transition-all duration-500"
+              priority
+            />
+
               </div>
               <span className={`hidden sm:block font-serif font-bold transition-all duration-500 ${
                 scrolled 
-                  ? "text-lg lg:text-xl text-[#2a1f1a]" 
-                  : "text-xl lg:text-2xl text-white drop-shadow-lg"
+                  ? "text-lg lg:text-2xl text-[#2a1f1a]" 
+                  : "text-2xl lg:text-3xl text-white drop-shadow-lg"
               }`}>
-                Balkan Bäckerei
+                
               </span>
             </Link>
+
 
             {/* Desktop Navigation - Centered */}
             <nav className="hidden lg:flex items-center gap-8 xl:gap-10">

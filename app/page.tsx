@@ -188,14 +188,15 @@ export default function HomePage() {
                     {/* Image header */}
                     <div className="relative h-28 sm:h-36 lg:h-40 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent z-10" />
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-3 sm:border-4 border-card shadow-xl z-20 group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300 sm:duration-500">
-                        <Image
-                          src={location.logo || "/placeholder.svg"}
-                          alt={`${location.name} Logo`}
-                          fill
-                          className="object-cover scale-150"
-                        />
-                      </div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-28 sm:h-28 lg:w-36 lg:h-36 rounded-full overflow-hidden border-3 sm:border-4 border-card shadow-xl bg-white z-20 group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300 sm:duration-500">
+  <Image
+    src={location.logo || "/placeholder.svg"}
+    alt={`${location.name} Logo`}
+    fill
+    className="object-contain scale-100 transition-transform duration-500"
+  />
+</div>
+
                     </div>
                     
                     {/* Content */}

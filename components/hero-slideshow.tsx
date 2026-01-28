@@ -305,12 +305,12 @@ export function HeroSlideshow() {
                           <div className="flex items-center gap-3 sm:gap-0 sm:flex-col">
                             {/* Logo */}
                             <div className="shrink-0 sm:mb-5">
-                              <div className="relative w-14 h-14 sm:w-20 sm:h-20 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 sm:border-3 border-[#c9a87c]/30 shadow-lg sm:shadow-xl group-hover:border-[#c9a87c]/60 group-hover:scale-105 sm:group-hover:scale-110 transition-all duration-300 sm:duration-500">
+                             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-36 lg:h-36 rounded-full bg-white overflow-hidden border-2 sm:border-3 border-[#c9a87c]/30 shadow-lg group-hover:border-[#c9a87c]/60 group-hover:scale-105 sm:group-hover:scale-110 transition-all duration-300 sm:duration-500">
                                 <Image
                                   src={loc.logo || "/placeholder.svg"}
                                   alt={`${loc.name} Logo`}
                                   fill
-                                  className="object-cover scale-150"
+                                  className="object-contain scale-100 transition-all duration-500"
                                 />
                               </div>
                             </div>

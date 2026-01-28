@@ -57,14 +57,14 @@ export function Footer() {
           {/* Logo & About */}
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border border-card/20 group-hover:border-card/40 transition-colors duration-300 shadow-lg">
-                <Image
-                  src="/images/mainlogo.png"
-                  alt="Balkan Bäckerei Logo"
-                  fill
-                  className="object-cover scale-150"
-                />
-              </div>
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border border-card/20 group-hover:border-card/40 transition-colors duration-300 shadow-lg bg-white">
+              <Image
+                src="/images/main-logo.png"
+                alt="Balkan Bäckerei Logo"
+                fill
+                className="object-contain scale-100 transition-all duration-500"
+              />
+            </div>
               <span className="font-serif text-lg font-semibold">Balkan Bäckerei</span>
             </div>
             <p className="text-card/70 text-xs sm:text-sm leading-relaxed">
@@ -157,19 +157,25 @@ export function Footer() {
         </div>
 
         <div className="border-t border-card/20 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-card/60 text-xs sm:text-sm">
-              © {new Date().getFullYear()} Balkan Bäckerei. Alle Rechte vorbehalten.
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-card/60 text-xs sm:text-sm text-center sm:text-left w-full sm:w-auto">
+            © {new Date().getFullYear()} Balkan Bäckerei. Alle Rechte vorbehalten.
+          </p>
+
+          {/* Developed by ClearLine Tech - centered */}
+          <p className="text-card/40 text-xs text-center w-full sm:w-auto">
+            Developed by ClearLine Tech
+          </p>
+
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Link href="/ueber-uns" className="text-card/40 hover:text-card/70 text-xs transition-colors">Impressum</Link>
+            <Link href="/kontakt" className="text-card/40 hover:text-card/70 text-xs transition-colors">Datenschutz</Link>
+            <p className="text-card/40 text-xs">
+              Mit Liebe im Frankfurt-Rhein-Main-Gebiet
             </p>
-            <div className="flex items-center gap-4 sm:gap-6">
-              <Link href="/ueber-uns" className="text-card/40 hover:text-card/70 text-xs transition-colors">Impressum</Link>
-              <Link href="/kontakt" className="text-card/40 hover:text-card/70 text-xs transition-colors">Datenschutz</Link>
-              <p className="text-card/40 text-xs">
-                Mit Liebe im Frankfurt-Rhein-Main-Gebiet
-              </p>
-            </div>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   )
