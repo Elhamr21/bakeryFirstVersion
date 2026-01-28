@@ -162,10 +162,12 @@ export function Footer() {
             © {new Date().getFullYear()} Balkan Bäckerei. Alle Rechte vorbehalten.
           </p>
 
-          {/* Developed by ClearLine Tech - centered */}
           <p className="text-card/40 text-xs text-center w-full sm:w-auto">
-            Developed by ClearLine Tech
+            <a href="https://clearline-ai.tech/" target="_blank" rel="noopener noreferrer" className="hover:text-card/70 transition-colors">
+              Developed by ClearLine Tech
+            </a>
           </p>
+
 
           <div className="flex items-center gap-4 sm:gap-6">
             <Link href="/ueber-uns" className="text-card/40 hover:text-card/70 text-xs transition-colors">Impressum</Link>
